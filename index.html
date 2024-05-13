@@ -854,28 +854,6 @@
 	<!-- Email Send -->
 	<script data-cfasync="false" type="text/javascript"
 			src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
-	<script type="text/javascript">
-
-		function createData() {
-			var sendData = $('#gform').serialize();
-			return sendData;
-		}
-		function sendMail(){
-			$.ajax({
-				type : "POST",
-				url : "https://api.emailjs.com/api/v1.0/email/send",
-				data : createData(),
-				datatype:"json",
-				success : function(data, status, xhr){
-					var input = confirm('연락주셔서 감사합니다. 빠른 시간내에 꼭 회신드리도록 하겠습니다! :)');
-				},
-				error : function(jqXHR, textStatus, errorThrown){
-					console.log("error")
-				}
-			});
-		}
-		//https://kutar37.tistory.com/entry/%EC%A0%95%EC%A0%81-HTML-form%ED%83%9C%EA%B7%B8%EC%97%90%EC%84%9C-%EB%A9%94%EC%9D%BC%EB%B3%B4%EB%82%B4%EA%B8%B0-Google-Apps-Mail
-	</script>
 
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
